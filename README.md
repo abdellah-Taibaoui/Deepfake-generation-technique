@@ -85,20 +85,45 @@ Audio samples generated using **XTTS** and **RVC** for one subject are provided 
 
 | Sample ID | Description                   | Audio File                                   |
 |-----------|-------------------------------|---------------------------------------------|
-| 1         | Original Audio                | [Original Audio](results/audio/sample_1.mp3)  |
-| 2         | XTTS-Generated Audio          | [XTTS](results/audio/xtts_sample_1.mp3)  |
+| 1         | Original Audio                |  |
+| 2         | XTTS-Generated Audio          |   |
 | 3         | RVC-Transformed Audio         | [RVC](results/audio/rvc_sample_1.mp3)   |
 | 4         | XTTS + RVC Combined Audio     | [XTTS+RVC](results/audio/xtts_rvc_sample.mp3)|
-
+(Media/zemour_tts.wav)
 ### Video Results
 The repository contains video samples created using **GeneFace**, **Wave2Lip**, and **DINet**. Below are links to videos for one subject:
 
-| Sample ID | Description                   | Video File                                   |
-|-----------|-------------------------------|---------------------------------------------|
-| 1         | Original Video                | [Original Video](results/video/sample.mp4)|
-| 2         | Wave2Lip-Synced Video         | [Wave2Lip-Video](results/video/wave2lip_sample.mp4)|
-| 3         | DINet-Enhanced Video          | [DINet-Video](results/video/dinet_sample.mp4)   |
-| 4         | GeneFace-Generated Video      | [GeneFace-Generated Video](results/video/geneface_sample.mp4)|
+**Original Video**
+
+https://github.com/user-attachments/assets/52bfad60-88dd-4581-9915-92b216893ab5
+
+**Wave2Lip- Video**
+
+
+
+https://github.com/user-attachments/assets/decce591-4513-4fd1-8aa6-d5de429e9141
+
+
+
+
+
+
+
+**DINet Video**
+
+
+https://github.com/user-attachments/assets/67296efa-a2c7-4099-8d90-0b1acbdaf23c
+
+
+
+**GeneFace-Generated Video**
+
+
+
+https://github.com/user-attachments/assets/448e0be1-cca7-4c38-b46e-db77eb6e75d3
+
+
+
 
 To see more videos, click this link: [Video Results](#)
 
@@ -110,7 +135,7 @@ Quantitative and subjective evaluation results are presented below:
 
 In this evaluation, we use three metrics (PSNR, SSIM, and VMAF) to assess the performance of the three tools on five videos. To conduct this analysis, we utilize **FFmetric**, an open-source software designed to compute these metrics.
 
-![Quantitative Evaluation Image](image1.png)
+![Quantitative Evaluation Image](Media/Metric_score.png)
 
 #### Subjective Evaluation
 
@@ -128,11 +153,11 @@ To complement the objective quality assessment, we conducted a subjective evalua
 
 This subjective evaluation provided additional insights into the quality and realism of the deepfake content generated, alongside the objective metrics.
 
-![Subjective Evaluation Image](image2.png)
+![Subjective Evaluation Image](Media/People_score.png)
 
 To evaluate further, we performed a detector test using two open-source detectors to evaluate LipFD and SBI+RECCE.
 
-![Detector Test Image](image3.png)
+![Detector Test Image](Media/Detector_score.png)
 
 ---
 
