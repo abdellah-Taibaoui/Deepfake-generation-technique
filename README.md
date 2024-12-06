@@ -1,5 +1,6 @@
 # Realistic Deepfake  Generation Techniques 
 
+<img src="Media/land.png" width="500" />
 
 This repository presents a comprehensive study and implementation of advanced **deepfake generation techniques**, combining **audio deepfake tools** (**XTTS** and **RVC**) with **video deepfake tools** (**GeneFace**, **Wave2Lip**, and **DINet**). The objective is to create highly realistic deepfake videos that are difficult to detect, showcase generated outputs, and evaluate their performance using both **quantitative metrics** and **subjective evaluations**.
 
@@ -189,7 +190,7 @@ In this evaluation, we use three metrics (PSNR, SSIM, and VMAF) to assess the pe
 To conduct this analysis, we utilize **FFmetric**, an open-source software designed to compute these metrics.
 [FFmetric Repository Link](https://github.com/fifonik/FFMetrics)
 
-![Quantitative Evaluation Image](Media/Metric_score.png)
+<img src="Media/Metric_score.png" width="500" />
 
 #### Subjective Evaluation
 
@@ -209,7 +210,7 @@ This subjective evaluation provided additional insights into the quality and rea
 
 **Audio evaluation result :**
 
-![Subjective Evaluation Image](Media/Audio_score.png)
+<img src="Media/Audio_score.png" width="300" />
 
 
 **Video evaluation result :**
