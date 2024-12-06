@@ -1,5 +1,4 @@
-# Deepfake Realistic Generation Techniques 
-![deepfake](https://github.com/user-attachments/assets/26bdc940-7f69-4359-8d01-b89c48ed0f5a)
+# Realistic Deepfake  Generation Techniques 
 
 
 This repository presents a comprehensive study and implementation of advanced **deepfake generation techniques**, combining **audio deepfake tools** (**XTTS** and **RVC**) with **video deepfake tools** (**GeneFace**, **Wave2Lip**, and **DINet**). The objective is to create highly realistic deepfake videos that are difficult to detect, showcase generated outputs, and evaluate their performance using both **quantitative metrics** and **subjective evaluations**.
@@ -22,15 +21,17 @@ This repository presents a comprehensive study and implementation of advanced **
    - [Video Results](#video-results)
    - [Evaluation Scores](#evaluation-scores)
 5. [Evaluation](#evaluation)
-   - [Objective Evaluation](#objective-evaluation)
+   - [Objective Evaluation](#Quantitative-evaluation)
    - [Subjective Evaluation](#subjective-evaluation)
-6. [Conclusion](#conclusion)
+6. [Conclusion](#Conclusion)
 
 ---
 
 ## Overview
 
-Deepfake technology leverages **Generative AI** to create synthetic media that mimics real-world visuals and sounds. This project implements a pipeline combining **audio deepfake generation** with **video synthesis** to produce highly realistic videos. The techniques utilized include state-of-the-art tools for **audio synthesis** and **lip-syncing**, enabling seamless alignment of generated audio with facial movements.
+Deepfake technology leverages **Generative AI** to create synthetic media that mimics real-world visuals and sounds. This project implements a pipeline combining **audio deepfake generation** with **video synthesis** to produce highly realistic videos. 
+after a study of the state of art we found that the most effective way to make realistic deepfake is LipSync so we eliminate faceswap and animation tools.
+The techniques utilized include state-of-the-art tools for **audio synthesis** and **lip-syncing**, enabling seamless alignment of generated audio with facial movements.
 
 ### Key Objectives:
 - Explore and compare multiple **deepfake generation tools**.
@@ -80,13 +81,19 @@ The combination of **XTTS** and **RVC** enhances the realism and personalization
 
 we selected diffrant famous people to generate deepfake hers some sample of them
 
-**video 1 (French): Kyliane Mbappé)**
+**video 1 (French): Kyliane Mbappé**
 
 https://github.com/user-attachments/assets/52bfad60-88dd-4581-9915-92b216893ab5
 
+the script used to generate audios : 
+
+"" Bonjour, c'est Kilyane Mbappé. Je vous annonce que finalement, 
+j'ai décidé de quitter l'équipe de France pour rejoindre l'équipe nationale d'Algérie. 
+J'ai décidé de représenter les Fennecs parce que c'est un choix du cœur. 
+Et je suis toujours fier de porter le maillot des Verts. One, two, three, viva l'Algérie!  ""
 
 
-**vidéo 2 (Arabic "Algerien dialect)** 
+**vidéo 2 (Arabic "Algerien dialect") : Présidant Tebboune** 
 
 https://github.com/user-attachments/assets/2bbd2b33-6f34-42ce-bf50-1b4cdae48353
 
@@ -168,7 +175,7 @@ https://github.com/user-attachments/assets/d3180b8c-5a44-43b4-bb51-4fa528c420e9
 https://github.com/user-attachments/assets/ae737765-dacb-4649-850c-7089017e6adf
 
 
-To see more videos, click this link: [Video Results]([#](https://drive.google.com/drive/u/4/folders/12Fh-KmeOdAszNoCKFOtl4_gU2pz8gsUu))
+To see more videos, click this link: [Video Results](https://drive.google.com/drive/u/4/folders/12Fh-KmeOdAszNoCKFOtl4_gU2pz8gsUu)
 
 ### Evaluation Scores
 
@@ -176,7 +183,10 @@ Quantitative and subjective evaluation results are presented below:
 
 #### Quantitative Evaluation
 
-In this evaluation, we use three metrics (PSNR, SSIM, and VMAF) to assess the performance of the three tools on five subjects . To conduct this analysis, we utilize **FFmetric**, an open-source software designed to compute these metrics.
+In this evaluation, we use three metrics (PSNR, SSIM, and VMAF) to assess the performance of the three tools on five subjects . 
+
+
+To conduct this analysis, we utilize **FFmetric**, an open-source software designed to compute these metrics.
 [FFmetric Repository Link](https://github.com/fifonik/FFMetrics)
 
 ![Quantitative Evaluation Image](Media/Metric_score.png)
@@ -206,7 +216,7 @@ This subjective evaluation provided additional insights into the quality and rea
 
 ![Subjective Evaluation Image](Media/People_Score.png)
 
-To evaluate further, we performed a detector test using two open-source detectors to evaluate LipFD and SBI+RECCE.
+To evaluate further, we performed a detector test using two open-source detectors to evaluate LipFD and SBI+RECCE (score <0.5 means videos didnt classified as a deepfake).
 
 [LipFD Repository Link](https://github.com/AaronComo/LipFD)
 
@@ -217,12 +227,19 @@ To evaluate further, we performed a detector test using two open-source detector
 
 ![Detector Test Image](Media/Detector_score.png)
 
----
 
-## Conclusion
+According to the results obtained, DINET is the most effective tool for generating high-quality deepfake videos, offering the best combination of realism, visual quality, and lip synchronization. GENFACE++ shows variable performance but excels in terms of perceived authenticity. WAVE2LIP is competitive but generally falls behind DINET and GENFACE++ in terms of video quality and perceived authenticity. These evaluations provide an overview of the strengths and limitations of each tool, highlighting their key advantages and areas for improvement.
 
-This project highlights the potential of combining state-of-the-art **audio** and **video deepfake techniques** to create synthetic media with unparalleled realism. By leveraging complementary tools like **XTTS**, **RVC**, **GeneFace**, **Wave2Lip**, and **DINet**, the generated content achieves:
-- High scores in both objective and subjective evaluations.
-- A significant step forward in seamless deepfake synthesis.
+
+## Conclusion and futur work
+
+In summary, this study makes a contribution to mastering and understanding the various methods and tools for generating audio and video deepfakes. It successfully generates realistic audio deepfakes in multiple languages by combining different audio generation methods (TTS + RVC) and trains voice conversion models to replicate voices of individuals speaking Arabic (Darija), such as Hafid Derradji and President Tebboune. Additionally, it conducts a comprehensive evaluation (both subjective and objective) of the various generated deepfakes.
+
+for futur work :
+
+1. Designing a workflow (pipeline) that automates the end-to-end deepfake generation process, transforming an original video with an input text into a realistic deepfake video.
+2. Enhancing the neural network architectures of various generation techniques to improve the quality and realism of deepfakes.
+
+
 
 
